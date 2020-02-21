@@ -14,7 +14,11 @@ def main():
 
     if option == 'Home':
         st.markdown('# Welcome to the Machine Learning Land')
-        st.markdown('This app contains a series of ML apps')
+        st.markdown('This app contains a series of Machine Learning Apps showing Image Classification Object Detection.'\
+            ' The app is built by [Boadzie Daniel](https://boadzie.surge.sh/) and The Students of [Artificial Intelligence Movement(AIM)](https://www.aimovement.club/)')
+        st.image('./img/Dan.jpg', width=200)
+        st.image('./img/AIM.jpeg', width=700)
+        st.markdown('---')
 
 ############################## Cats vs Dogs ########################################
         
@@ -31,9 +35,9 @@ def main():
             # st.write("Predicting...")
             label = cat_vs_dog(uploaded_file)
             st.balloons()
-            st.write(label)
+            st.success(label)
         
-        ######################## Fashion   ################################
+        ######################## Detecto   ################################
     elif option == 'Detecto':
         st.markdown("# Object Dector")
         st.markdown("#### A Simple Object detector using Detecto")
@@ -47,8 +51,8 @@ def main():
             st.success("#### And taraaaaa!")
             result = detecto_m(uploaded_file)
             result = plt.plot()
-            st.balloons()
             st.pyplot(result)
+            st.balloons()
     
     
         
