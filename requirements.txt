@@ -1,5 +1,6 @@
 streamlit==0.56.0
 matplotlib==3.1.1
+sklearn==0.21.3
 toml
 detecto==1.1.2 
 numpy==1.17.2
