@@ -1,14 +1,11 @@
 import streamlit as st
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.vgg19 import decode_predictions, preprocess_input
 from PIL import Image
-from skimage import io
-from predict import  cat_vs_dog, detecto_m
+from predict import   detecto_m
 import matplotlib.pyplot as plt
 
 
 def main():
-    pages = ['Home', 'Cat_vs_Dog', 'Detecto']
+    pages = ['Home', 'Detecto']
 
     option = st.sidebar.selectbox('Data Science for Marketing Dashboards', options=pages)
 
@@ -19,23 +16,6 @@ def main():
         st.image('./img/Dan.jpg', width=200)
         st.image('./img/AIM.jpeg', width=700)
         st.markdown('---')
-
-############################## Cats vs Dogs ########################################
-        
-    elif option == 'Cat_vs_Dog':
-        st.markdown("# Cats Vs. Dogs Classifier")
-        st.markdown("#### A Simple Cat vs Dog Classifier using Transfer Learning")
-        st.markdown("---")
-
-        uploaded_file = st.file_uploader("Choose an image...", type="jpg")
-        if uploaded_file is not None:
-            imagez = Image.open(uploaded_file)
-            st.image(imagez, caption='Your Image.', use_column_width=True)
-            st.write("")
-            # st.write("Predicting...")
-            label = cat_vs_dog(uploaded_file)
-            st.balloons()
-            st.success(label)
         
         ######################## Detecto   ################################
     elif option == 'Detecto':
