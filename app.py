@@ -10,11 +10,10 @@ def main():
     option = st.sidebar.selectbox('Data Science for Marketing Dashboards', options=pages)
 
     if option == 'Home':
-        st.markdown('# Welcome to the Machine Learning Land')
-        st.markdown('This app contains a series of Machine Learning Apps showing Image Classification Object Detection.'\
-            ' The app is built by [Boadzie Daniel](https://boadzie.surge.sh/) and The Students of [Artificial Intelligence Movement(AIM)](https://www.aimovement.club/)')
+        st.markdown('# Object Detection')
+        st.markdown('Object Detection.'\
+            ' The app is built by [Boadzie Daniel](https://boadzie.surge.sh/)')
         st.image('./img/Dan.jpg', width=200)
-        st.image('./img/AIM.jpeg', width=700)
         st.markdown('---')
         
         ######################## Detecto   ################################
